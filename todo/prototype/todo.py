@@ -76,5 +76,13 @@ class Todo:
         self.conn.commit()
 
 
+    def delete(self, todoTitle):
+        print('Deleting todo:', todoTitle)
+        self.conn.execute('''
+            DELETE FROM todo WHERE title = ?;
+        ''', (todoTitle,))
+        self.conn.commit()
+
+
 
 

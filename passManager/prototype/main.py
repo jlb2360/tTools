@@ -43,5 +43,23 @@ def main():
         pm.print_passwords()
 
 
+    elif argv[0] == "delete":
+        if len(argv) != 2:
+            print("Usage: passManager.py delete <website>")
+            return
+        else:
+            pm.delete_password(argv[1])
+
+    elif argv[0] == "help":
+        print("Usage: passManager.py <command> <args>")
+        print("Commands:")
+        print("add <website> <username>")
+        print("get <website>")
+        print("list")
+        print("delete <website>")
+        print("set <website> <username> <password>")
+        print("help")
+
+
 if __name__ == "__main__":
     main()

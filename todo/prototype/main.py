@@ -45,6 +45,27 @@ def main():
             sys.exit(1)
         td.clear()
 
+    elif command == 'delete':
+        if len(args) < 2:
+            print('Usage: todo.py remove <title>')
+            sys.exit(1)
+        td.delete(args[1])
+
+    elif command == 'help':
+        print('Usage: todo.py <command> [args]')
+        print('Commands:')
+        print('  add <title>')
+        print('  list')
+        print('  print <title>')
+        print('  done <title>')
+        print('  clear')
+        print('  delete <title>')
+        sys.exit(1)
+
+    else:
+        print('Unknown command: ' + command)
+        sys.exit(1)
+
 
 
 if __name__ == '__main__':

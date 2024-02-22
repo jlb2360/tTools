@@ -101,3 +101,12 @@ class PassManager:
             print(key + ": Username: " + self.passwords[key]["username"] + " Password: " + self.passwords[key]["password"])
 
 
+    def delete_password(self, website):
+        if website in self.passwords:
+            del self.passwords[website]
+            json.dump(self.passwords, open(self.address, 'w'), indent=4, sort_keys=True)
+            print("Password deleted")
+        else:
+            print("No password for this website")
+
+
