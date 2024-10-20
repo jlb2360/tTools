@@ -9,7 +9,7 @@
 cmake_minimum_required(VERSION 3.22)
 
 project(
-    CppProjectTemplate
+    tTools
     VERSION 1.0.0
     LANGUAGES C CXX)
 
@@ -35,8 +35,8 @@ option(ENABLE_SANITIZE_THREAD "Enable Thread Sanitizer" OFF)
 option(ENABLE_LTO "Enable Link Time Optimization" ON)
 
 # Project/library name
-set(LIBRARY_NAME Library)
-set(EXECUTABLE_NAME Executable)
+set(LIBRARY_NAME ToDo_Library)
+set(EXECUTABLE_NAME ToDo)
 
 # CMAKE MODULES
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")

@@ -1,10 +1,11 @@
 set(LIBRARY_SOURCES
-    my_lib.cc
+    todo.cc
 )
 
 
 set(LIBRARY_HEADERS
-    my_lib.h
+    todo.h
+    result.h
 )
 
 set(LIBRARY_INCLUDES
